@@ -5,5 +5,4 @@ machine:
 
 checkout:
   post:
-    commands:
-      - ./docker-build.sh
+    - ./docker-build.sh
