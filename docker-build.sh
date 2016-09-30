@@ -10,6 +10,7 @@ fi
 docker build -t pi-gen-environment .
 
 docker run \
+	--privileged \
 	-v ${PWD}:/build \
 	-v ${ARTIFACTS}:/artifacts \
 	-e IMG_NAME="${IMG_NAME}" \
