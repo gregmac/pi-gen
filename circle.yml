@@ -4,9 +4,9 @@ machine:
     IMG_NAME: TestCircleCi
     MAX_STAGE: 2
 
-  services:
-    - docker
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get -y install git quilt kpartx realpath qemu-user-static debootstrap zerofree pxz zip 
 
-checkout:
   post:
-    - ./docker-build.sh
+    - sudo  ./build.sh
