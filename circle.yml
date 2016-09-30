@@ -1,7 +1,11 @@
 machine:
+
   environment:
     IMG_NAME: TestCircleCi
     MAX_STAGE: 2
+
+  services:
+    - docker
 
 checkout:
   post:
