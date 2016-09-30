@@ -131,7 +131,7 @@ fi
 if [ -z "${MAX_STAGE}" ]; then
 	MAX_STAGE=4
 fi
-if [ -n $RUN_STAGE ]; then
+if [ -n "${RUN_STAGE}" ]; then
 	echo "Running ONLY stage${RUN_STAGE}"
 else
 	echo "Running stage${MAX_STAGE} build"
