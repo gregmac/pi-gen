@@ -12,7 +12,7 @@ docker build -t pi-gen-environment .
 docker run \
 	-v ${PWD}:/build \
 	-v ${ARTIFACTS}:/artifacts \
-	-e IMG_NAME='$IMG_NAME' \
-	-e APT_PROXY='$APT_PROXY' \
-	-e MAX_STAGE='$MAX_STAGE' \
+	-e IMG_NAME="${IMG_NAME}" \
+	-e APT_PROXY="${APT_PROXY}" \
+	-e MAX_STAGE="${MAX_STAGE}" \
 	pi-gen-environment
