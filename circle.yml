@@ -9,4 +9,4 @@ dependencies:
     - sudo apt-get update; sudo apt-get -y install git quilt kpartx realpath qemu-user-static debootstrap zerofree pxz zip 
 
   post:
-    - sudo  ./build.sh
+    - sudo -E ./build.sh
