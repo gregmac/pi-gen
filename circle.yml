@@ -10,7 +10,7 @@ dependencies:
   pre:
     - sudo apt-get update
     - sudo apt-get -y install git quilt kpartx realpath qemu-user-static debootstrap zerofree pxz zip
-    - sudo apt-get install pip3 
+    - sudo apt-get -y install python3-pip 
     - sudo pip3 install git+https://github.com/g2p/vido.git
 
   post:
