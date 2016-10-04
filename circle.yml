@@ -3,10 +3,13 @@ machine:
   environment:
     IMG_NAME: TestCircleCi
     MAX_STAGE: 2
-
+  python: 
+    version: 3.5.1
+    
 dependencies:
   pre:
-    - sudo apt-get update; sudo apt-get -y install git quilt kpartx realpath qemu-user-static debootstrap zerofree pxz zip 
+    - sudo apt-get update; sudo apt-get -y install git quilt kpartx realpath qemu-user-static debootstrap zerofree pxz zip
+    - sudo pip3 install git+https://github.com/g2p/vido.git
 
   post:
-    - sudo -E ./build.sh
+    - vido --pass-env IMG_NAME MAX_STAGE -- ./build.sh
